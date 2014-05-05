@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 0.10.24
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    - secure: "UfiqjiC1S7zqeD7lythCYbAbpooa/5LSvZqLY0tNe64HjBMjM/rsnwLJ8RlAef/MOFlVhhF2CbJOv4td6x/7AP8Uojg6f8oT7OWaL57xW1FjAk9VxWwsqBOxjoIPh7Vi60icCuXF44AzX50M+H8XJUs9i34kk9TqHukyTREm9vM="
+  app:
+    master: photoapart
+env:
+  global:
+    - secure: "Xqh0GcB5IuUhc5c96W4IhM5EM6LU0vXFy7jGJssVB6YWbZSqNrxU5WfUF3Ge8AjEvDowW8N0+XCdkS66yO0glsSCAZsBToQBCqBTzycs9WgM4kC/st2HDup3MKgwHVF7NxyjFHd464ZKicFgbUoh92p0H+365sNbP5vUVe5dgok="
+    - secure: "D/MJ7+Uxa9Te/cFSNrI4Xu045O9RdZRUNZbwiv9/Iu5lwpYiiPvfP1HOlsYr253MIsbBOc1kw9vElM3mKWJsFcz2Fh0TFoLICH2kwSXxkUsa1qdJLaV2Xh/j7TMz7vNrWQ8ZQlmNZCf5pL9omA7jr/tdSyBjAo2FBLT05zRxivA="
+    - secure: "bPrspa4Nb6f1hnkVf7jeK99KQP0Ielx0R3xRjeff71JoQhf54MikBAB/ODDLTEEzXHmVzf+swE3IrxwDL5yQm/phuNHTdSdIBMDV9/8tc93yD/MbGDAEsOoGh3quWYb+s3MXN43HpXonWA0m2lwyVUAUr+l0CiLdoQ0g3L8iF60="
+    - secure: "YELptFhgvoTr0uamKZkAr8h0UG1nfLh4AxdulnXGhvUTY9vbMBFcakp/BHsLa1bZex1jLxiLfxwzulW36C2Ou/bDsMe7d0mJLSGfYGbrAPTOnPFC4keoLzaaTXGun0e/5wZUyOMcGan+Oy8HL/U3spDNCAMHsrgQ6nfFnjKT/gY="
