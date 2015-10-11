@@ -1,9 +1,9 @@
 var http = require('http'),
-express = require('express'),
-partials = require('express-partials'),
-mongoose = require('mongoose'),
-engines = require('consolidate'),
-port = process.env.PORT || 3000;
+    express = require('express'),
+    partials = require('express-partials'),
+    mongoose = require('mongoose'),
+    engines = require('consolidate'),
+    port = process.env.PORT || 3000;
 var app = express();
 
 // setting server
@@ -39,15 +39,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/get_photo.json', function(req, res) {
-            res.contentType('application/json');
-            var time = req.query.time;
-            console.log('time: ' + time);
-            DBPhoto.find({time: time}, function(err, docs) {
-                                if (docs.length === 0) return res.send({});
-                                var photo = selectRandom(docs);
-                                var json = JSON.stringify(photo);
-                                res.send(json);
-                            });
+    res.contentType('application/json');
+    var time = req.query.time;
+    console.log('time: ' + time);
+    DBPhoto.find({time: time}, function(err, docs) {
+        if ((typeof(docs) === 'undefined') || (docs.length === 0)) return res.send({});
+        var photo = selectRandom(docs);
+        var json = JSON.stringify(photo);
+        res.send(json);
+    });
 });
 
 var selectRandom = function(list) {
