@@ -10,6 +10,6 @@
         "express-partials": "= 0.2.0",
         "consolidate": "= 0.10.0",
         "hamljs": "= 0.6.2",
-        "mongoose": "= 2.5.7"
+        "mongoose": "= 4.1.10"
     }
 }
