@@ -42,17 +42,14 @@ app.get('/get_photo.json', function(req, res) {
     res.contentType('application/json');
     var time = req.query.time;
     console.log('time: ' + time);
-    DBPhoto.find({time: time}, function(err, docs) {
-        if ((typeof(docs) === 'undefined') || (docs.length === 0)) return res.send({});
-        var photo = selectRandom(docs);
-        var json = JSON.stringify(photo);
+    DBPhoto.findOne({time: time}, function(err, doc) {
+        if (typeof(doc) === 'undefined') {
+            return res.send({});
+        }
+        var json = JSON.stringify(doc);
         res.send(json);
     });
 });
-
-var selectRandom = function(list) {
-    return list[Math.floor(Math.random() * list.length)];
-};
 
 app.listen(port);
 
